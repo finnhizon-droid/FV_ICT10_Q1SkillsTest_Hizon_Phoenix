@@ -3,16 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
-    <title>Reciept Generator</title>
+    <title>Receipt Generator</title>
 </head>
 <body>
-    <h1>Spencer's Pastry Shop</h1>
 
-    <p>Welcome to Spencer's Pastry Shop! Please choose from our menu below.</p> 
-    
-    
+    <h1>OBMC Entrep Fair Group 1 - Spencer's Sweets</h1>
+
+    <p>Welcome to our shop, <b>Spencer's Sweets</b>! Please select the items you would like to order from the menu below. Once done, click the "Create Order" button to generate your receipt.</p>
+
+    <h3><b>Menu:</b></h3>
+
+    <div>
+        <input type="checkbox" id="sweet1"> Banana Loaf Cakes (3 pcs) - ₱110
+        <br>
+        <input type="checkbox" id="sweet2"> Chocolate Chip Cookies (4 pcs) - ₱105
+        <br>
+        <input type="checkbox" id="sweet3"> Cinnamon Rolls (3 pcs) - ₱115
+        <br>
+        <input type="checkbox" id="sweet4"> Crinkle Cookies (4 pcs) - ₱110
+        <br>
+        <input type="checkbox" id="sweet5"> Chocolate Muffins (2 pcs) - ₱110
+        <br>
+        <button py-click="generate">Create Order</button>
+    </div>
+
+    <br>
+
+    <p>==== <b>Receipt</b> ====</p>
+
+    <div id="subtotal">Subtotal: ₱0.00</div>
+    <br>
+    <div id="tax">Tax: ₱0.00</div>
+    <br>
+    <div id="total"><b>Total: ₱0.00</b></div>
+
     <py-script src="main.py"></py-script>
+
 </body>
 </html>
